@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Teste</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Tem pet?</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <form>
+        <input type="text" placeholder="Nome" name="nome" required>
+        <input type="number" placeholder="Idade" name="idade" required>
+        <input type="text" placeholder="Tem pet?" name="temPet" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        const baseUrl = 'http://localhost:3004/people'
+
+        document.querySelector('form').addEventListener('submit', e => {
+            e.preventDefault()
+
+            let person = {}
+            document.querySelectorAll('input').forEach(input => {
+                person[input.name] = input.value
+            })
+
+            fetch(baseUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(person)
+            }).then(res => window.location.reload())
+        })
+        function renderTable(people){
+            people.forEach(person => {
+                const tbody = document.querySelector('tbody')
+                const tr = document.createElement('tr')
+                tr.innerHTML = 
+                `
+                    <td>${person.nome}</td>
+                    <td>${person.idade}</td>
+                    <td>${person.temPet === "true" ? 'Sim' : 'Não'}</td>
+                `
+                tbody.appendChild(tr)
+            })
+        }
+
+        fetch(baseUrl)
+            .then(res => res.json())
+            .then(json => renderTable(json))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+### acessando via GET
+GET http://localhost:3000/subscribers
+###
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "userName": "Djalma Sindeaux",
+    "userChannel": "Udemy"
+}
+###
+
+GET http://localhost:3000/subscribers/64fb24c3a488ed4da602219c
+###
+
+DELETE http://localhost:3000/subscribers/64fb2539a488ed4da602219f
+###
+
+PATCH http://localhost:3000/subscribers/64fb2539a488ed4da602219f
+Content-Type: application/json
+
+{
+    "userName": "João Rangel"
+}

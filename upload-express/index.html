@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando upload de arquivos com Multer e Node.js</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Criando upload com Multer e Node.js</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="arquivo">Selecione o arquivo:</label>
+                <input type="file" class="form-control-file" name="arquivo" id="arquivo">
+            </div>
+            <button class="btn btn-primary btn-lg">Enviar arquivo</button>
+        </form>
+    </div>
+</body>
+</html>
