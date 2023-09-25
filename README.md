@@ -3,7 +3,8 @@
 <p align="center">
     <img src="https://github.com/GabrielLima5/curso-node-hcode/raw/main/Certificado/certificate.jpg" alt="Certificado">
 </p>
-Este repositório registra minha jornada de aprendizado durante o Curso Completo de Node.js da <a href="https://hcode.com.br/">Hcode Treinamentos</a>, realizado entre 24 de agosto de 2023 e 6 de setembro de 2023. Ele contém recursos relacionados ao curso, incluindo códigos de exemplo, exercícios práticos e projetos.
+Este repositório registra minha jornada de aprendizado durante o Curso Completo de Node.js da <a href="https://hcode.com.br/">Hcode Treinamentos</a>, realizado entre 23 de agosto de 2023 e 12 de setembro de 2023. Ele contém recursos relacionados ao curso, incluindo códigos de exemplo, exercícios práticos e projetos.
+
 ## Sobre o Curso
 Durante o curso, mergulhei profundamente no mundo do Node.js, um ambiente de execução que permite a execução de código JavaScript no lado do servidor. Adquiri uma compreensão abrangente dos conceitos e recursos fundamentais do Node. Abaixo, listo os principais tópicos e áreas abordadas:
 
